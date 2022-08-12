@@ -1,0 +1,252 @@
+:root{
+    --primaryblue:#3775F5;
+    --primaryyellow:#FCC200;
+    --white:#ffffff;
+    --bg:#ffffff;
+    --textcolour:var(--black);
+    --cardcolour:var(--white);
+    --black:#121212;
+    --btnboxshadow:rgba(252, 194, 0, 0.25);
+    --cardshadow:rgba(0, 0, 0, 0.2);
+}
+.darktheme{
+    --primaryblue:#3775F5;
+    --primaryyellow:#FDC91C;
+    --white:#ffffff;
+     --textcolour:var(--white);
+    --bg:#121212;
+    --black:#121212;
+    --cardcolour:#343434;
+    --btnboxshadow:rgba(252, 194, 0, 0.25);
+    --cardshadow:rgba(0, 0, 0, 0.2);
+}
+
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+ }
+ 
+ body{
+     background-color:var(--bg);
+     width:100%;
+     overflow-x: hidden;
+     color: var(--textcolour);;
+ }
+
+ footer{
+    background-color:var(--primaryblue);
+    height:100px;
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: var(--white);
+    font-family: roboto;
+}
+footer li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+header li a:visited{
+  color: var(--textcolour);
+}
+header li{
+    display: inline-block;
+    margin-right:60px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+.gamebtn{
+    color:var(--primaryyellow);
+    font-size: 22px;
+    text-decoration: none;
+    text-shadow: 2px 2px 20px var(--btnboxshadow);
+    font-family: Roboto;
+}
+.yellow{
+    color:var(--primaryyellow);
+}
+.gamebtn:hover{
+    padding: 9px 22px 6px 25px;
+    background-color: var(--primaryblue);
+    color: var(--white);
+    border-radius: 10px 0px;
+    transition: 0.5s ease-out;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px;
+    margin-bottom:50px;
+}
+header h1{
+    font-family: hanken;
+    margin-top: 15px;
+    color:var(--primaryblue);
+    padding-left:20px;
+}
+header ul{
+    list-style: none;
+    margin-top:30px;
+    height:30px;
+    margin-right: 20px;
+}
+
+#icon{
+    text-align: center;
+    justify-content: baseline;
+}
+
+.button4 {
+   display: inline-block;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 22px;
+     background-color: transparent;
+    border: none;
+    color: var(--primaryyellow);
+	cursor: pointer;
+	text-decoration: none;
+}
+.yellow{
+    color:var(--primaryyellow);
+}
+.active{
+    border-bottom: 3px solid var(--primaryblue);
+}
+.titletext{
+    text-align: center;
+    font-family: Roboto;
+    color: var(--textcolour);
+}
+
+.stars{
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+     top:30%;
+    left:48%;
+    width: 25%;
+    transform: translate(-50%,-50%);
+    margin-top: 61px; 
+}
+
+.img2{
+    width: 60%;
+    margin-left:40px; 
+ } 
+
+ .img3{
+    width:90%;
+
+ }  
+
+@keyframes rotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sup-img{
+    display: grid;
+   grid-template-columns: auto auto auto;
+   grid-template-rows: auto auto auto auto auto;
+   justify-content: center;
+    column-gap: 33px;
+    row-gap: 36px;
+    margin-top: 130px;
+}
+.sup-img img{
+    width:200px;
+    height:200px;
+}
+
+.card-holder{
+    text-align: center;
+   
+}
+.card{
+   padding:10px;
+   width: 300px;
+   height: 400px;
+   background-color: var(--cardcolour);
+   border-radius: 20px;
+   margin-top: 20px;
+ 
+   text-align: center;
+   filter: drop-shadow(2px 2px 12px var(--cardshadow));
+}
+.extra{
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+.card h2{
+    font-family: roboto;
+    font-size: 30px;
+    line-height:1.8em;
+    color:var(--textcolour);
+}
+.card h3{
+    font-family: roboto;
+    font-size: 20px;
+    color:var(--primaryblue);
+    line-height:1.2em;
+}
+
+
+
+
+/*media queries*/
+/*iphone 6/7/8 plus*/
+@media only screen and (min-device-width: 414px) 
+and (max-device-width: 736px){
+
+    .titletext{
+       font-size: 30px;
+    }
+    .sup-img{
+        display: grid;
+       grid-template-columns: auto auto;
+       grid-template-rows: auto auto auto auto auto;
+       justify-content: center;
+        column-gap: 35px;
+        row-gap: 36px;
+        margin-top: 130px;
+    }
+
+    .card{
+        padding:10px;
+        width: 169px;
+        height: 225px;
+      
+     }
+
+     .sup-img img{
+        width:133px;
+        height:123px;
+    }
+
+    .card h2{
+        font-size: 16px;
+    }
+
+    .card h3{
+        font-size: 14px;
+    }
+
+    .extra{
+        
+        padding-top: 11px;
+        padding-left: 10px;
+    }
+}
